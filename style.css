@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  background-color: hsl(30, 54%, 90%);
+  font-size: 1.6rem; /* default font size */
+  font-family: 'Outfit', sans-serif;
+  color: hsl(30, 10%, 34%);
+}
+
+main.card {
+  max-width: 736px;
+  margin: 2rem auto;
+  border: none;
+  border-radius: 24px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 2rem;
+}
+
+div.card-image {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+div.card-image img {
+  width: 100%;
+  border-radius: 16px;
+  padding: 10px; /* padding added */
+}
+
+div.card-content {
+  width: 100%;
+  padding: 2rem;
+}
+
+h1,
+h2 {
+  font-family: 'Young Serif', serif;
+}
+
+h1 {
+  color: hsl(24, 5%, 18%);
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+h2 {
+  margin-bottom: 0.6em;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: hsl(332, 51%, 32%);
+}
+
+h3 {
+  font-size: 2rem;
+  color: hsl(332, 51%, 32%);
+}
+
+p,
+li,
+strong,
+span {
+  color: hsl(30, 10%, 34%);
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "•";
+  color: hsl(332, 51%, 32%);
+  font-size: 1.4em;
+  vertical-align: middle;
+  margin-right: 1.3em;
+  margin-left: 0.3em;
+}
+
+ul li {
+  line-height: 1.5;
+  display: flex;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid hsl(30, 18%, 87%);
+}
+
+section.intro p {
+  margin: 1.25em 0;
+  line-height: 1.5;
+}
+
+section.prep-time {
+  padding: 28px;
+  background-color: hsl(330, 100%, 98%);
+}
+
+section.prep-time h3 {
+  margin-bottom: 16px;
+}
+
+section.ingredients {
+  margin: 32px 0;
+}
+
+section.instructions {
+  margin: 32px 0;
+}
+
+section.instructions ol {
+  list-style: none;
+  counter-reset: step-counter;
+}
+
+section.instructions ol li {
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+  display: flex;
+  gap: 0.75em;
+  align-items: baseline;
+}
+
+section.instructions ol li::before {
+  content: counter(step-counter);
+  counter-increment: step-counter;
+  color: hsl(332, 51%, 32%);
+  font-weight: bold;
+  padding-right: 0.5em;
+}
+
+section.instructions ol li p {
+  margin: 0;
+}
+
+section.nutrition {
+  margin-top: 32px;
+}
+
+section.nutrition p {
+  margin-bottom: 0.6em;
+  line-height: 1.5;
+}
+
+.nutrition-table div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+.nutrition-table p {
+  margin-top: 0.6em;
+  padding: 0 2em;
+}
+
+.nutrition-table p:first-of-type {
+  width: 45%;
+}
+
+.nutrition-table p:last-of-type {
+  width: 55%;
+  color: hsl(332, 51%, 32%);
+  font-weight: bold;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 700px) {
+  body {
+    font-size: 1.4rem; /* Adjust base font size for smaller screens */
+  }
+
+  main.card {
+    padding: 2%;
+  }
+
+  div.card-image {
+    padding: 2.5%; /* Adjusted padding */
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  p,
+  li,
+  strong,
+  span {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 1.2rem; /* Further adjust base font size */
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  p,
+  li,
+  strong,
+  span {
+    font-size: 1.2rem;
+  }
+}
